@@ -1,0 +1,10 @@
+grammar MacAddress;
+
+MAC : [0-9a-fA-F] ;
+OCT : MAC MAC;
+SEP : ':' | '.' | '-' ;
+MACADDRESS : OCT SEP OCT SEP OCT SEP OCT SEP OCT SEP OCT ;
+
+program
+    : MACADDRESS EOF
+    ;
